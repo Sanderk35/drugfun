@@ -1,4 +1,4 @@
-package me.CHANGEME.slimefunaddon;
+package me.sanderk35.drugfun;
 
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
@@ -13,22 +13,18 @@ import io.github.thebusybiscuit.slimefun4.api.SlimefunAddon;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.config.Config;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
 
-public class ExampleAddon extends JavaPlugin implements SlimefunAddon {
+public class DrugFun extends JavaPlugin implements SlimefunAddon {
 
     @Override
     public void onEnable() {
         // Read something from your config.yml
         Config cfg = new Config(this);
 
-        if (cfg.getBoolean("options.auto-update")) {
-            // You could start an Auto-Updater for example
-        }
-
         /*
          * 1. Creating a new Category
          * This Category will use the following ItemStack
          */
-        ItemStack itemGroupItem = new CustomItemStack(Material.DIAMOND, "&4Addon Category", "", "&a> Click to open");
+        ItemStack itemGroupItem = new CustomItemStack(Material.SUGAR, "&4DrugFun", "", "&a> Click to open", "", "&cDon't do drugs kids!");
 
         // Give your Category a unique id.
         NamespacedKey itemGroupId = new NamespacedKey(this, "addon_category");
